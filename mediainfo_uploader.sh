@@ -1,7 +1,7 @@
 #!/bin/bash
 # set -euo pipefail # uncomment once script has no issues.
 
-OUTPUT_DIR="/config"
+OUTPUT_DIR="/config" # set this to /config only if you're running Radarr through Docker since the /config directory is mapped to an existing folder on your host by default. If running Radarr on bare metal, change this to a directory that Radarr will have write access to.
 
 RADARR_HOST="http://host:port"
 RADARR_APIKEY="apikey"
