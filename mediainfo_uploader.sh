@@ -13,6 +13,7 @@ NZB_API_TOKEN="apikey" # api key from the other site
 IMGBB_APIKEY="apikey" # register on imgbb.com, then go here: https://api.imgbb.com/ and generate an api key
 SCREENS_COUNT=6
 IMGBB_TIMEOUT=60  # in seconds.
+SCREENSHOTS_ENABLE=true
 
 MAX_RETRIES=3
 DELAY_FIRST=60
@@ -131,6 +132,7 @@ if [ -n "$nzbInfoUrl" ]; then
   if [ "$sceneName" = "$release_name" ] && \
      [ "$screenshots_current" = "false" ] && \
      [ "$can_add" = "true" ] && \
+	 [ "$SCREENSHOTS_ENABLE" = "true" ] && \
      [ "$screenshots_allowed" = "true" ]; then
 
     log "Uploading screenshots for release '$release_name' (uuid=$uuid)..."
